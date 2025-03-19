@@ -14,9 +14,9 @@ const fileController = async (req, res) => {
         .json({ error: { description: "No files uploaded." } });
     }
     const file = req.files[0];
-    console.log("fileControllerFile", file);
+    //console.log("fileControllerFile", file);
     const response = await cloudinaryUpload(file);
-    console.log("response:", response);
+    //console.log("response:", response);
     res
       .status(200)
       .json({ message: "File uploaded successfully", uploadResult: response });

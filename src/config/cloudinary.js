@@ -1,6 +1,7 @@
-const cloudinary = require("cloudinary").v2;
+const { v2 } = require("cloudinary");
 const crypto = require("crypto");
-require("dotenv").config();
+//require("dotenv").config();
+const cloudinary = v2;
 
 const cloudinaryConfig = () => {
   cloudinary.config({

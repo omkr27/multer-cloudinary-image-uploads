@@ -6,7 +6,7 @@ const cloudinaryUpload = async (file) => {
     console.log("cloudinaryUploadFile", file);
     const cloudinaryResponse = await uploadToCloudinary(file.path);
     console.log("cloudinaryResponse:", cloudinaryResponse);
-    fs.link(file.path, (err) => {
+    fs.unlink(file.path, (err) => {
       if (err) {
         console.error(err);
       }
